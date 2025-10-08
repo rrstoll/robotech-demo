@@ -215,8 +215,8 @@ const FAQ = () => {
                             duration: 0.3,
                           },
                           opacity: {
-                            duration: 0.25,
-                            delay: 0.1,
+                            duration: 0.15,
+                            delay: 0,
                           },
                         },
                       }}
@@ -232,14 +232,14 @@ const FAQ = () => {
                           },
                         },
                       }}
-                      className="overflow-hidden"
+                      className="overflow-hidden bg-gray-50 dark:bg-gray-800/50"
                     >
                       <motion.div
                         initial={{ y: -10 }}
                         animate={{ y: 0 }}
                         exit={{ y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="px-6 sm:px-8 pb-6 sm:pb-8 bg-gray-50 dark:bg-gray-800/50"
+                        className="px-6 sm:px-8 pb-6 sm:pb-8"
                       >
                         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                           {faq.answer}
