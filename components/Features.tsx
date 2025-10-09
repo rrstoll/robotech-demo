@@ -68,7 +68,7 @@ const Features = () => {
   return (
     <section
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-white"
       id="features"
     >
       <div className="max-w-7xl mx-auto">
@@ -79,7 +79,7 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Everything you need to{" "}
             <span className="text-primary-600">succeed</span>
           </h2>
@@ -104,7 +104,7 @@ const Features = () => {
                 variants={itemVariants}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="group relative p-8 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-primary-300 hover:shadow-xl transition-all duration-300"
+                className="group relative p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300"
               >
                 {/* Icon container */}
                 <motion.div

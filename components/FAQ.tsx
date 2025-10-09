@@ -83,7 +83,7 @@ const FAQ = () => {
 
   return (
     <section
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-white"
       id="faq"
     >
       <div className="max-w-4xl mx-auto">
@@ -100,23 +100,23 @@ const FAQ = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 mb-6"
+            className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 mb-6"
           >
             <HelpCircle className="w-8 h-8" />
           </motion.div>
 
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Frequently Asked{" "}
-            <span className="text-primary-600 dark:text-primary-400">
+            <span className="text-primary-600">
               Questions
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Everything you need to know about renting robots with Robotech. Can&apos;t
             find what you&apos;re looking for? Feel free to{" "}
             <a
               href="#"
-              className="text-primary-600 dark:text-primary-400 hover:underline"
+              className="text-primary-600 hover:underline"
             >
               contact our support team
             </a>
@@ -145,8 +145,8 @@ const FAQ = () => {
                 className={cn(
                   "rounded-2xl border-2 transition-all duration-300 overflow-hidden",
                   isOpen
-                    ? "border-primary-500 dark:border-primary-600 shadow-lg shadow-primary-500/10"
-                    : "border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                    ? "border-primary-500 shadow-lg shadow-primary-500/10"
+                    : "border-gray-200 hover:border-gray-300"
                 )}
               >
                 {/* Question Button */}
@@ -155,8 +155,8 @@ const FAQ = () => {
                   className={cn(
                     "w-full text-left p-6 sm:p-8 flex items-start justify-between gap-4 transition-colors",
                     isOpen
-                      ? "bg-gray-50 dark:bg-gray-800/50"
-                      : "bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750"
+                      ? "bg-gray-50"
+                      : "bg-white hover:bg-gray-50"
                   )}
                 >
                   <div className="flex-1">
@@ -165,7 +165,7 @@ const FAQ = () => {
                       <motion.span
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={isOpen ? { opacity: 1, scale: 1 } : {}}
-                        className="inline-block px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full mb-3"
+                        className="inline-block px-3 py-1 text-xs font-medium bg-primary-100 text-primary-600 rounded-full mb-3"
                       >
                         {faq.category}
                       </motion.span>
@@ -175,8 +175,8 @@ const FAQ = () => {
                       className={cn(
                         "text-lg sm:text-xl font-semibold transition-colors",
                         isOpen
-                          ? "text-primary-600 dark:text-primary-400"
-                          : "text-gray-900 dark:text-white"
+                          ? "text-primary-600"
+                          : "text-gray-900"
                       )}
                     >
                       {faq.question}
@@ -191,7 +191,7 @@ const FAQ = () => {
                       "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors",
                       isOpen
                         ? "bg-primary-600 text-white"
-                        : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400"
+                        : "bg-gray-100 text-gray-600"
                     )}
                   >
                     {isOpen ? (
@@ -232,7 +232,7 @@ const FAQ = () => {
                           },
                         },
                       }}
-                      className="overflow-hidden bg-gray-50 dark:bg-gray-800/50"
+                      className="overflow-hidden bg-gray-50"
                     >
                       <motion.div
                         initial={{ y: -10 }}
@@ -241,7 +241,7 @@ const FAQ = () => {
                         transition={{ duration: 0.2 }}
                         className="px-6 sm:px-8 pb-6 sm:pb-8"
                       >
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-gray-700 leading-relaxed">
                           {faq.answer}
                         </p>
                       </motion.div>
@@ -259,12 +259,12 @@ const FAQ = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center p-8 rounded-2xl bg-gradient-to-br from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 border border-primary-200 dark:border-primary-800"
+          className="mt-16 text-center p-8 rounded-2xl bg-gradient-to-br from-primary-50 to-purple-50 border border-primary-200"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">
             Still have questions?
           </h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Our robot experts are here to help you find the perfect assistant for
             your home. Get personalized recommendations!
           </p>
@@ -279,7 +279,7 @@ const FAQ = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border-2 border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-colors"
+              className="px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold border-2 border-gray-200 hover:border-primary-300 transition-colors"
             >
               Visit a Showroom
             </motion.button>

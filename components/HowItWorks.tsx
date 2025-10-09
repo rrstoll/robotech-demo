@@ -64,7 +64,7 @@ const HowItWorks = () => {
   return (
     <section
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-black dark:to-gray-900"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
       id="how-it-works"
     >
       <div className="max-w-7xl mx-auto">
@@ -75,10 +75,10 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            How <span className="text-primary-600 dark:text-primary-400">Robotech</span> works
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            How <span className="text-primary-600">Robotech</span> works
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Get your personal robot assistant in four simple steps. It&apos;s easier
             than you think.
           </p>
@@ -92,7 +92,7 @@ const HowItWorks = () => {
           className="relative"
         >
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-200 via-purple-200 to-primary-200 dark:from-primary-900 dark:via-purple-900 dark:to-primary-900 -translate-y-1/2 -z-10" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-200 via-purple-200 to-primary-200 -translate-y-1/2 -z-10" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => {
@@ -107,7 +107,7 @@ const HowItWorks = () => {
                   <motion.div
                     whileHover={{ y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 h-full"
+                    className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full"
                   >
                     {/* Step Number */}
                     <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-primary-600 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
@@ -124,10 +124,10 @@ const HowItWorks = () => {
                     </motion.div>
 
                     {/* Content */}
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {step.description}
                     </p>
 
@@ -139,7 +139,7 @@ const HowItWorks = () => {
                           isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }
                         }
                         transition={{ delay: 0.5 + index * 0.2 }}
-                        className="hidden lg:block absolute top-1/2 -right-8 -translate-y-1/2 text-primary-400 dark:text-primary-600"
+                        className="hidden lg:block absolute top-1/2 -right-8 -translate-y-1/2 text-primary-400"
                       >
                         <svg
                           className="w-16 h-16"
@@ -180,7 +180,7 @@ const HowItWorks = () => {
           >
             Start Your Free Trial
           </motion.button>
-          <p className="mt-4 text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-gray-600">
             7-day trial • No credit card required • Cancel anytime
           </p>
         </motion.div>

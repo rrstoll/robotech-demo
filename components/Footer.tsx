@@ -77,7 +77,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-gray-300 relative overflow-hidden">
+    <footer className="bg-gray-900 text-gray-300 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl" />

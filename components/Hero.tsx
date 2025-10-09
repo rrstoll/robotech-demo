@@ -181,17 +181,17 @@ const Hero = () => {
         
         {/* Video loading indicator */}
         <div
-          className={`absolute inset-0 w-full h-full bg-gray-300 dark:bg-gray-800 transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full bg-gray-300 transition-opacity duration-1000 ${
             isVideo1Loaded ? 'opacity-0' : 'opacity-100'
           }`}
         >
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
-              <div className="text-gray-600 dark:text-gray-400 font-semibold">
+              <div className="text-gray-600 font-semibold">
                 Loading video...
               </div>
-              <div className="text-sm text-gray-500 dark:text-gray-500 mt-2">
+              <div className="text-sm text-gray-500 mt-2">
                 Optimizing for your connection
               </div>
             </div>
@@ -286,11 +286,11 @@ const Hero = () => {
         </video>
         
         {/* Video overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Background elements */}
-      <div className="absolute inset-0 -z-10 dark:opacity-30">
+      <div className="absolute inset-0 -z-10 opacity-30">
         <motion.div
           variants={floatingVariants}
           initial="initial"

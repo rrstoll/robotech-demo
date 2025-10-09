@@ -90,7 +90,7 @@ const RobotCategories = () => {
   return (
     <section
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-white"
       id="robots"
     >
       <div className="max-w-7xl mx-auto">
@@ -101,13 +101,13 @@ const RobotCategories = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Robots for every{" "}
-            <span className="text-primary-600 dark:text-primary-400">
+            <span className="text-primary-600">
               lifestyle
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Browse our fleet of specialized robots, each designed to make your
             life easier and more enjoyable.
           </p>
@@ -128,14 +128,14 @@ const RobotCategories = () => {
                 variants={itemVariants}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="group relative p-8 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group relative p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 {/* Background gradient on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
 
                 {/* Video Demo Section */}
                 {category.hasVideo && category.videoSrc && (
-                  <div className="mb-6 aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+                  <div className="mb-6 aspect-video rounded-lg overflow-hidden bg-gray-100">
                     <OptimizedVideo
                       src={category.videoSrc}
                       alt={`${category.title} demonstration`}
@@ -157,23 +157,23 @@ const RobotCategories = () => {
                 </motion.div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {category.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   {category.description}
                 </p>
 
                 {/* Robot types */}
                 <div className="space-y-2 mb-4">
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-500">
+                  <p className="text-sm font-medium text-gray-500">
                     Popular models:
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {category.robotTypes.map((robot, idx) => (
                       <span
                         key={idx}
-                        className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full"
+                        className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full"
                       >
                         {robot}
                       </span>
@@ -185,7 +185,7 @@ const RobotCategories = () => {
                 <motion.a
                   href="#"
                   whileHover={{ x: 5 }}
-                  className="inline-flex items-center text-primary-600 dark:text-primary-400 font-medium text-sm group-hover:underline"
+                  className="inline-flex items-center text-primary-600 font-medium text-sm group-hover:underline"
                 >
                   View all models
                   <svg
@@ -214,13 +214,13 @@ const RobotCategories = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-gray-600 mb-4">
             Not sure which robot is right for you?
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-primary-600 dark:text-primary-400 font-semibold hover:underline"
+            className="text-primary-600 font-semibold hover:underline"
           >
             Take our robot quiz →
           </motion.button>

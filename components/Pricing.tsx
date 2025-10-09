@@ -96,7 +96,7 @@ const Pricing = () => {
   return (
     <section
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
       id="pricing"
     >
       <div className="max-w-7xl mx-auto">
@@ -192,10 +192,10 @@ const Pricing = () => {
                 onHoverStart={() => setHoveredIndex(index)}
                 onHoverEnd={() => setHoveredIndex(null)}
                 className={cn(
-                  "relative p-8 rounded-2xl border-2 transition-all duration-300 bg-white dark:bg-gray-800",
+                  "relative p-8 rounded-2xl border-2 transition-all duration-300 bg-white",
                   tier.popular
                     ? "border-primary-500 shadow-2xl shadow-primary-500/20 scale-105"
-                    : "border-gray-200 dark:border-gray-700 hover:border-primary-300 hover:shadow-xl",
+                    : "border-gray-200 hover:border-primary-300 hover:shadow-xl",
                   isOtherHovered && "opacity-60 scale-95"
                 )}
               >
@@ -215,10 +215,10 @@ const Pricing = () => {
                 )}
 
                 {/* Tier Name */}
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {tier.name}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">{tier.description}</p>
+                <p className="text-gray-600 mb-6">{tier.description}</p>
 
                 {/* Price */}
                 <div className="mb-6">

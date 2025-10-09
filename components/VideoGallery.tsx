@@ -74,7 +74,7 @@ const VideoGallery = ({
   return (
     <div className={cn("relative", className)}>
       {/* Main Video Display */}
-      <div className="relative aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+      <div className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -172,7 +172,7 @@ const VideoGallery = ({
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                <div className="w-full h-full bg-gray-200 flex items-center justify-center">
                   <Play className="w-4 h-4 text-gray-500" />
                 </div>
               )}

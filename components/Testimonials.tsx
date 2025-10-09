@@ -131,7 +131,7 @@ const Testimonials = () => {
 
   return (
     <section
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900 overflow-hidden"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
       id="testimonials"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
@@ -179,7 +179,7 @@ const Testimonials = () => {
                 style={{ x, opacity }}
                 className="absolute w-full max-w-4xl cursor-grab active:cursor-grabbing"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 sm:p-12 shadow-2xl border border-gray-100 dark:border-gray-700">
+                <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-2xl border border-gray-100">
                   {/* Quote Icon */}
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}

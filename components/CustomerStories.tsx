@@ -137,7 +137,7 @@ const CustomerStories = () => {
 
   return (
     <section
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900 overflow-hidden"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
       id="testimonials"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
@@ -151,13 +151,13 @@ const CustomerStories = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Loved by households{" "}
-            <span className="text-primary-600 dark:text-primary-400">
+            <span className="text-primary-600">
               nationwide
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Real stories from real customers about how Robotech robots have
             transformed their daily lives.
           </p>
@@ -187,7 +187,7 @@ const CustomerStories = () => {
                 style={{ x, opacity }}
                 className="absolute w-full max-w-4xl cursor-grab active:cursor-grabbing"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 sm:p-12 shadow-2xl border border-gray-100 dark:border-gray-700">
+                <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-2xl border border-gray-100">
                   {/* Quote Icon */}
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
@@ -197,9 +197,9 @@ const CustomerStories = () => {
                       stiffness: 200,
                       delay: 0.2,
                     }}
-                    className="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mb-6"
+                    className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6"
                   >
-                    <Quote className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+                    <Quote className="w-8 h-8 text-primary-600" />
                   </motion.div>
 
                   {/* Rating */}
@@ -230,7 +230,7 @@ const CustomerStories = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 rounded-full text-sm font-medium mb-6"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6"
                   >
                     <Bot className="w-4 h-4" />
                     Using: {customerStories[currentIndex].robotUsed}
@@ -241,7 +241,7 @@ const CustomerStories = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
-                    className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8"
+                    className="text-xl sm:text-2xl text-gray-700 leading-relaxed mb-8"
                   >
                     &ldquo;{customerStories[currentIndex].content}&rdquo;
                   </motion.p>
@@ -263,10 +263,10 @@ const CustomerStories = () => {
 
                     {/* Details */}
                     <div>
-                      <p className="font-semibold text-gray-900 dark:text-white text-lg">
+                      <p className="font-semibold text-gray-900 text-lg">
                         {customerStories[currentIndex].name}
                       </p>
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-600">
                         {customerStories[currentIndex].role} •{" "}
                         {customerStories[currentIndex].location}
                       </p>
@@ -283,7 +283,7 @@ const CustomerStories = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={handlePrev}
-              className="pointer-events-auto w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:border-primary-300 dark:hover:border-primary-600 transition-colors"
+              className="pointer-events-auto w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-primary-600 hover:border-primary-300 transition-colors"
             >
               <ChevronLeft className="w-6 h-6" />
             </motion.button>
@@ -292,7 +292,7 @@ const CustomerStories = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={handleNext}
-              className="pointer-events-auto w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:border-primary-300 dark:hover:border-primary-600 transition-colors"
+              className="pointer-events-auto w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-primary-600 hover:border-primary-300 transition-colors"
             >
               <ChevronRight className="w-6 h-6" />
             </motion.button>
@@ -314,8 +314,8 @@ const CustomerStories = () => {
                 <div
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? "bg-primary-600 dark:bg-primary-400 w-8"
-                      : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+                      ? "bg-primary-600 w-8"
+                      : "bg-gray-300 hover:bg-gray-400"
                   }`}
                 />
               </motion.button>
@@ -326,7 +326,7 @@ const CustomerStories = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center mt-6 text-sm text-gray-500 dark:text-gray-500"
+            className="text-center mt-6 text-sm text-gray-500"
           >
             {isAutoPlaying ? (
               <span>Auto-playing • Hover to pause</span>
@@ -357,10 +357,10 @@ const CustomerStories = () => {
               transition={{ delay: 0.4 + index * 0.1 }}
               className="text-center"
             >
-              <p className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">
+              <p className="text-4xl font-bold text-primary-600 mb-2">
                 {stat.value}
               </p>
-              <p className="text-gray-600 dark:text-gray-400">{stat.label}</p>
+              <p className="text-gray-600">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>

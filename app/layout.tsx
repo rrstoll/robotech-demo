@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ClientThemeProvider } from "@/components/ClientThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,7 +34,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <ClientThemeProvider>{children}</ClientThemeProvider>
+        {children}
       </body>
     </html>
   );
