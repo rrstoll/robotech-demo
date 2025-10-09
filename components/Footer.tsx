@@ -121,7 +121,7 @@ const Footer = () => {
                 className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hello@taskflow.com
+                russ@russinmotion.com
               </motion.a>
               <motion.a
                 href="#"
@@ -137,7 +137,7 @@ const Footer = () => {
                 className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
               >
                 <MapPin className="w-4 h-4" />
-                San Francisco, CA
+                Alexandria, VA
               </motion.a>
             </div>
           </motion.div>
