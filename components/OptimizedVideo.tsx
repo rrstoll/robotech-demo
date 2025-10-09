@@ -132,15 +132,7 @@ const OptimizedVideo = ({
         Your browser does not support the video tag.
       </video>
 
-      {/* Loading Indicator */}
-      {!isLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 rounded-lg">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600 mx-auto mb-2"></div>
-            <div className="text-sm text-gray-600">Loading video...</div>
-          </div>
-        </div>
-      )}
+      {/* Loading Indicator - Removed since we have poster images */}
 
       {/* Custom Controls */}
       {controls && showControls && (

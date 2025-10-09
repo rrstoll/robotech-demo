@@ -14,6 +14,7 @@ const robotCategories = [
     robotTypes: ["VacBot Pro", "MopMaster", "TidyBot"],
     color: "from-blue-500 to-cyan-500",
     videoSrc: "/demo-video.mp4", // Using existing demo video
+    posterSrc: "/stills/demo-still.webp",
     hasVideo: true,
   },
   {
@@ -24,6 +25,7 @@ const robotCategories = [
     robotTypes: ["ChefBot", "DishWasher AI", "PrepAssist"],
     color: "from-orange-500 to-red-500",
     videoSrc: "/demo-video-2.mp4", // Using existing demo video
+    posterSrc: "/stills/demo-still-2.webp",
     hasVideo: true,
   },
   {
@@ -34,6 +36,7 @@ const robotCategories = [
     robotTypes: ["FriendBot", "TutorBot", "PetPal"],
     color: "from-pink-500 to-rose-500",
     videoSrc: "/demo-video-3.mp4", // Using existing demo video
+    posterSrc: "/stills/demo-still-3.webp",
     hasVideo: true,
   },
   {
@@ -138,11 +141,12 @@ const RobotCategories = () => {
                   <div className="mb-6 aspect-video rounded-lg overflow-hidden bg-gray-100">
                     <OptimizedVideo
                       src={category.videoSrc}
+                      poster={category.posterSrc}
                       alt={`${category.title} demonstration`}
                       className="w-full h-full"
                       autoPlay={false}
                       controls={true}
-                      preload="none"
+                      preload="metadata"
                     />
                   </div>
                 )}
