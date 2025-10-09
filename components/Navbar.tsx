@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const navLinks = [

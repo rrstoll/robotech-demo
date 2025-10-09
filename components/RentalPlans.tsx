@@ -112,7 +112,7 @@ const RentalPlans = () => {
   return (
     <section
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
+      className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
       id="rental-plans"
     >
       <div className="max-w-7xl mx-auto">

@@ -64,7 +64,7 @@ const HowItWorks = () => {
   return (
     <section
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
       id="how-it-works"
     >
       <div className="max-w-7xl mx-auto">
@@ -110,7 +110,7 @@ const HowItWorks = () => {
                     className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full"
                   >
                     {/* Step Number */}
-                    <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-primary-600 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
+                    <div className="absolute -top-4 -left-3 -sm:left-4 w-12 h-12 bg-gradient-to-br from-primary-600 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
                       {step.number}
                     </div>
 

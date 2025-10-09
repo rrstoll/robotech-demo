@@ -333,7 +333,7 @@ const Hero = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-6xl mx-auto text-center relative z-20"
+        className="max-w-6xl mx-auto mt-[48px] mb-[88px] sm:my-0 text-center relative z-20"
       >
         {/* Badge */}
         <motion.div 
