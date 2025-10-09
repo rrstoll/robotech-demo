@@ -13,8 +13,8 @@ const robotCategories = [
       "Autonomous vacuuming, mopping, and tidying robots that keep your home spotless 24/7.",
     robotTypes: ["VacBot Pro", "MopMaster", "TidyBot"],
     color: "from-blue-500 to-cyan-500",
-    videoSrc: "/demo-video.mp4", // Using existing demo video
-    posterSrc: "/stills/demo-still.webp",
+    videoSrc: "/demo-video-2.mp4", // Using existing demo video
+    posterSrc: "/stills/demo-still-2.webp",
     hasVideo: true,
   },
   {
@@ -24,8 +24,8 @@ const robotCategories = [
       "From meal prep to dishwashing, let culinary robots handle your kitchen tasks.",
     robotTypes: ["ChefBot", "DishWasher AI", "PrepAssist"],
     color: "from-orange-500 to-red-500",
-    videoSrc: "/demo-video-2.mp4", // Using existing demo video
-    posterSrc: "/stills/demo-still-2.webp",
+    videoSrc: "/demo-video-3.mp4", // Using existing demo video
+    posterSrc: "/stills/demo-still-3.webp",
     hasVideo: true,
   },
   {
@@ -35,8 +35,8 @@ const robotCategories = [
       "Interactive robots for entertainment, education, and emotional support for all ages.",
     robotTypes: ["FriendBot", "TutorBot", "PetPal"],
     color: "from-pink-500 to-rose-500",
-    videoSrc: "/demo-video-3.mp4", // Using existing demo video
-    posterSrc: "/stills/demo-still-3.webp",
+    videoSrc: "/demo-video.mp4", // Using existing demo video
+    posterSrc: "/stills/demo-still.webp",
     hasVideo: true,
   },
   {
