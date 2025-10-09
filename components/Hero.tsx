@@ -204,6 +204,7 @@ const Hero = () => {
           muted
           playsInline
           preload="metadata"
+          poster="/stills/demo-still.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: currentVideo === 1 && isVideo1Loaded && !isTransitioning ? 0.5 : 0,
@@ -233,6 +234,7 @@ const Hero = () => {
           muted
           playsInline
           preload="metadata"
+          poster="/stills/demo-still-2.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: currentVideo === 2 && isVideo2Loaded && !isTransitioning ? 0.5 : 0,
@@ -262,6 +264,7 @@ const Hero = () => {
           muted
           playsInline
           preload="metadata"
+          poster="/stills/demo-still-3.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: currentVideo === 3 && isVideo3Loaded && !isTransitioning ? 0.5 : 0,
