@@ -136,67 +136,6 @@ const Hero = () => {
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        {/* Always visible animated background */}
-        <div className="w-full h-full bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900">
-          {/* Animated geometric shapes */}
-          <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-          <motion.div
-            className="absolute top-3/4 right-1/4 w-48 h-48 bg-white/20 rounded-full blur-2xl"
-            animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.6, 0.3, 0.6],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-white/20 rounded-full blur-xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.4, 0.7, 0.4],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2,
-            }}
-          />
-        </div>
-        
-        {/* Video loading indicator */}
-        <div
-          className={`absolute inset-0 w-full h-full bg-gray-300 transition-opacity duration-1000 ${
-            isVideo1Loaded ? 'opacity-0' : 'opacity-100'
-          }`}
-        >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
-              <div className="text-gray-600 font-semibold">
-                Loading video...
-              </div>
-              <div className="text-sm text-gray-500 mt-2">
-                Optimizing for your connection
-              </div>
-            </div>
-          </div>
-        </div>
         
         {/* Video 1 - Full Screen */}
         <video
@@ -207,7 +146,7 @@ const Hero = () => {
           poster="/stills/demo-still.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            opacity: currentVideo === 1 && isVideo1Loaded && !isTransitioning ? 0.5 : 0,
+            opacity: currentVideo === 1 && isVideo1Loaded && !isTransitioning ? 0.8 : 0,
             transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
             zIndex: 1
           }}
@@ -237,7 +176,7 @@ const Hero = () => {
           poster="/stills/demo-still-2.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            opacity: currentVideo === 2 && isVideo2Loaded && !isTransitioning ? 0.5 : 0,
+            opacity: currentVideo === 2 && isVideo2Loaded && !isTransitioning ? 0.8 : 0,
             transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
             zIndex: 1
           }}
@@ -267,7 +206,7 @@ const Hero = () => {
           poster="/stills/demo-still-3.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            opacity: currentVideo === 3 && isVideo3Loaded && !isTransitioning ? 0.5 : 0,
+            opacity: currentVideo === 3 && isVideo3Loaded && !isTransitioning ? 0.8 : 0,
             transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
             zIndex: 1
           }}
@@ -289,46 +228,7 @@ const Hero = () => {
         </video>
         
         {/* Video overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
-
-      {/* Background elements */}
-      <div className="absolute inset-0 -z-10 opacity-30">
-        <motion.div
-          variants={floatingVariants}
-          initial="initial"
-          animate="animate"
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-20 left-10 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
-        />
-        <motion.div
-          variants={floatingVariants}
-          initial="initial"
-          animate="animate"
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-          className="absolute top-40 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
-        />
-        <motion.div
-          variants={floatingVariants}
-          initial="initial"
-          animate="animate"
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 4,
-          }}
-          className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
-        />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       {/* Content */}
@@ -341,7 +241,7 @@ const Hero = () => {
         {/* Badge */}
         <motion.div 
           variants={itemVariants} 
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8 inline-flex"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium border border-white/30">
@@ -353,7 +253,7 @@ const Hero = () => {
         {/* Headline */}
         <motion.h1
           variants={itemVariants}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-5xl sm:text-6xl lg:text-7xl font-semi text-white mb-6 drop-shadow-2xl"
         >
           Your Personal Robot<br />
@@ -365,7 +265,7 @@ const Hero = () => {
         {/* Subheadline */}
         <motion.p
           variants={itemVariants}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-xl sm:text-2xl text-gray-100 mb-12 max-w-3xl mx-auto drop-shadow-lg"
         >
           Rent cutting-edge home robots on demand. No commitment, no maintenance
@@ -376,7 +276,7 @@ const Hero = () => {
                {/* CTA Buttons */}
                <motion.div
                  variants={itemVariants}
-                 transition={{ duration: 0.5, ease: "easeOut" }}
+                 transition={{ duration: 0.8, ease: "easeOut" }}
                  className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
                >
                  <motion.button
@@ -414,7 +314,7 @@ const Hero = () => {
         {/* Social proof */}
         <motion.div
           variants={itemVariants}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-200"
         >
           <div className="flex items-center gap-2">
@@ -452,7 +352,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
         <motion.div
