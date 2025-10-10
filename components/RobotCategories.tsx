@@ -138,7 +138,7 @@ const RobotCategories = () => {
 
                 {/* Video Demo Section */}
                 {category.hasVideo && category.videoSrc && (
-                  <div className="mb-6 aspect-video rounded-lg overflow-hidden bg-gray-100">
+                  <div className="mb-6 aspect-video rounded-lg overflow-hidden">
                     <OptimizedVideo
                       src={category.videoSrc}
                       poster={category.posterSrc}
