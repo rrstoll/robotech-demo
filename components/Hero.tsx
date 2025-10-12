@@ -36,10 +36,9 @@ const Hero = () => {
       };
 
       const handleEnded = () => {
-        // Seamless transition to next video
+        // Instant cut to next video
         setCurrentVideo(prev => prev === 3 ? 1 : prev + 1);
       };
-      
       video.addEventListener('canplay', handleCanPlay);
       video.addEventListener('error', handleError);
       video.addEventListener('abort', handleAbort);
@@ -140,7 +139,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: currentVideo === 1 && isVideo1Loaded ? 0.8 : 0,
-            transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
+            transition: 'none',
             zIndex: 1
           }}
           onMouseEnter={() => videoRef1.current?.pause()}
@@ -170,7 +169,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: currentVideo === 2 && isVideo2Loaded ? 0.8 : 0,
-            transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
+            transition: 'none',
             zIndex: 1
           }}
           onMouseEnter={() => videoRef2.current?.pause()}
@@ -200,7 +199,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: currentVideo === 3 && isVideo3Loaded ? 0.8 : 0,
-            transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
+            transition: 'none',
             zIndex: 1
           }}
           onMouseEnter={() => videoRef3.current?.pause()}
