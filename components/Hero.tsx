@@ -13,7 +13,6 @@ const Hero = () => {
   const [isVideo2Loaded, setIsVideo2Loaded] = useState(false);
   const [isVideo3Loaded, setIsVideo3Loaded] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(1);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   // Video loading and cycling based on video completion
@@ -37,14 +36,8 @@ const Hero = () => {
       };
 
       const handleEnded = () => {
-        // When video ends, start transition to next video
-        setIsTransitioning(true);
-        
-        // After a brief fade, switch to next video
-        setTimeout(() => {
-          setCurrentVideo(prev => prev === 3 ? 1 : prev + 1);
-          setIsTransitioning(false);
-        }, 300); // 300ms transition
+        // Seamless transition to next video
+        setCurrentVideo(prev => prev === 3 ? 1 : prev + 1);
       };
       
       video.addEventListener('canplay', handleCanPlay);
@@ -146,7 +139,7 @@ const Hero = () => {
           poster="/stills/demo-still.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            opacity: currentVideo === 1 && isVideo1Loaded && !isTransitioning ? 0.8 : 0,
+            opacity: currentVideo === 1 && isVideo1Loaded ? 0.8 : 0,
             transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
             zIndex: 1
           }}
@@ -176,7 +169,7 @@ const Hero = () => {
           poster="/stills/demo-still-2.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            opacity: currentVideo === 2 && isVideo2Loaded && !isTransitioning ? 0.8 : 0,
+            opacity: currentVideo === 2 && isVideo2Loaded ? 0.8 : 0,
             transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
             zIndex: 1
           }}
@@ -206,7 +199,7 @@ const Hero = () => {
           poster="/stills/demo-still-3.webp"
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            opacity: currentVideo === 3 && isVideo3Loaded && !isTransitioning ? 0.8 : 0,
+            opacity: currentVideo === 3 && isVideo3Loaded ? 0.8 : 0,
             transition: prefersReducedMotion ? 'none' : 'opacity 0.3s ease-in-out',
             zIndex: 1
           }}
